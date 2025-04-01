@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jackp\\OneDrive\\Desktop\\Recommendations\\backend\\Recomendations\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53126BF4-36CE-4DA0-AC3A-9793600EAC96}|Recomendations\\Recomendations.csproj|c:\\users\\jackp\\onedrive\\desktop\\recommendations\\backend\\recomendations\\recomendations\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{53126BF4-36CE-4DA0-AC3A-9793600EAC96}|Recomendations\\Recomendations.csproj|solutionrelative:recomendations\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53126BF4-36CE-4DA0-AC3A-9793600EAC96}|Recomendations\\Recomendations.csproj|c:\\users\\jackp\\onedrive\\desktop\\recommendations\\backend\\recomendations\\recomendations\\controllers\\recommendationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53126BF4-36CE-4DA0-AC3A-9793600EAC96}|Recomendations\\Recomendations.csproj|solutionrelative:recomendations\\controllers\\recommendationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53126BF4-36CE-4DA0-AC3A-9793600EAC96}|Recomendations\\Recomendations.csproj|c:\\users\\jackp\\onedrive\\desktop\\recommendations\\backend\\recomendations\\recomendations\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53126BF4-36CE-4DA0-AC3A-9793600EAC96}|Recomendations\\Recomendations.csproj|solutionrelative:recomendations\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 124,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\jackp\\OneDrive\\Desktop\\Recommendations\\backend\\Recomendations\\Recomendations\\.gitignore",
+              "RelativeDocumentMoniker": "Recomendations\\.gitignore",
+              "ToolTip": "C:\\Users\\jackp\\OneDrive\\Desktop\\Recommendations\\backend\\Recomendations\\Recomendations\\.gitignore",
+              "RelativeToolTip": "Recomendations\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-01T00:09:24.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jackp\\OneDrive\\Desktop\\Recommendations\\backend\\Recomendations\\Recomendations\\Program.cs",
+              "RelativeDocumentMoniker": "Recomendations\\Program.cs",
+              "ToolTip": "C:\\Users\\jackp\\OneDrive\\Desktop\\Recommendations\\backend\\Recomendations\\Recomendations\\Program.cs",
+              "RelativeToolTip": "Recomendations\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:59:06.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RecommendationsController.cs",
+              "DocumentMoniker": "C:\\Users\\jackp\\OneDrive\\Desktop\\Recommendations\\backend\\Recomendations\\Recomendations\\Controllers\\RecommendationsController.cs",
+              "RelativeDocumentMoniker": "Recomendations\\Controllers\\RecommendationsController.cs",
+              "ToolTip": "C:\\Users\\jackp\\OneDrive\\Desktop\\Recommendations\\backend\\Recomendations\\Recomendations\\Controllers\\RecommendationsController.cs",
+              "RelativeToolTip": "Recomendations\\Controllers\\RecommendationsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:56:01.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
