@@ -30,8 +30,10 @@ def recommend(itemId, X, item_mapper, item_inv_mapper, k=5, metric='cosine', mes
 
     return rec_ids, rec_distances
 
-# Example usage
+# Only runs if this file is executed directly
 if __name__ == '__main__':
-    # Replace with a real contentId from your data
+    # Use any valid article ID from your dataset
     example_article_id = list(item_mapper.keys())[0]
+
+    # Run recommendations
     rec_ids, rec_distances = recommend(example_article_id, X, item_mapper, item_inv_mapper)
