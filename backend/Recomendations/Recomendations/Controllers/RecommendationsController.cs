@@ -32,18 +32,7 @@ namespace RecommenderApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] RecommendRequest request)
         {
-            // === ✅ MOCKED DATA FOR TESTING ===
-            var result = new RecommendResponse
-            {
-                Collaborative = new List<int> { 101, 102, 103, 104, 105 },
-                Content = new List<int> { 201, 202, 203, 204, 205 },
-                Azure = new List<int> { 301, 302, 303, 304, 305 }
-            };
-
-            return Ok(result);
-
-            // === 🔁 UNCOMMENT FOR REAL INTEGRATION ===
-            /*
+            
             var collaborative = RunPythonScript("collab_model.py", request.UserID);
             var content = RunPythonScript("content_model.py", request.UserID);
             var azure = await CallAzureEndpointAsync(request.UserID);
@@ -56,7 +45,7 @@ namespace RecommenderApi.Controllers
             };
 
             return Ok(result);
-            */
+        
         }
 
         // Optional: Python integration (disabled for now)
