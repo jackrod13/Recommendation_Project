@@ -32,23 +32,27 @@ namespace RecommenderApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] RecommendRequest request)
         {
-            
-            var collaborative = RunPythonScript("collab_model.py", request.UserID);
-            var content = RunPythonScript("content_model.py", request.UserID);
-            var azure = await CallAzureEndpointAsync(request.UserID);
-
-            var result = new RecommendResponse
+            try
             {
-                Collaborative = collaborative,
-                Content = content,
-                Azure = azure
-            };
+                var collaborative = RunPythonScript("load_collab_model.py", request.UserID);
+                var content = RunPythonScript("content_model.py", request.UserID);
+                var azure = new List<int> { 999, 998, 997, 996, 995 }; // Placeholder for Azure ML
 
-            return Ok(result);
-        
+                var result = new RecommendResponse
+                {
+                    Collaborative = collaborative,
+                    Content = content,
+                    Azure = azure
+                };
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
-        // Optional: Python integration (disabled for now)
         private List<int> RunPythonScript(string scriptName, string userID)
         {
             var psi = new ProcessStartInfo
@@ -56,18 +60,30 @@ namespace RecommenderApi.Controllers
                 FileName = "python",
                 Arguments = $"{scriptName} {userID}",
                 RedirectStandardOutput = true,
+                RedirectStandardError = true,
                 UseShellExecute = false,
-                CreateNoWindow = true
+                CreateNoWindow = true,
+                WorkingDirectory = AppDomain.CurrentDomain.BaseDirectory
             };
 
-            var process = Process.Start(psi);
-            var output = process.StandardOutput.ReadToEnd();
+            var process = new Process { StartInfo = psi };
+
+            process.Start();
+
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+
             process.WaitForExit();
 
-            return output.Split(',').Select(int.Parse).ToList();
+            if (!string.IsNullOrEmpty(error))
+            {
+                throw new Exception($"Python error: {error}");
+            }
+
+            return output.Split(',').Select(id => int.Parse(id.Trim())).ToList();
         }
 
-        // Optional: Azure ML integration (disabled for now)
+        // Optional Azure ML logic (not yet active)
         private async Task<List<int>> CallAzureEndpointAsync(string userID)
         {
             var client = _httpClientFactory.CreateClient();
